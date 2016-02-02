@@ -28,5 +28,5 @@ RUN npm install -g grunt-cli
 
 # Exec
 WORKDIR /src/ressources/build
-ENTRYPOINT grunt prod && grunt watch
+CMD grunt prod && grunt watch
 
