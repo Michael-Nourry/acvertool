@@ -23,6 +23,7 @@ RUN yum install -y nodejs npm
 RUN npm config set registry "http://registry.npmjs.org/" \
 && npm install -g inherits \
 && npm install -g bower \
+&& cd /src \
 && npm install \
 && bower update --allow-root \
 && npm install -g grunt-cli 
