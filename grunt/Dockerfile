@@ -20,11 +20,11 @@ RUN yum install -y nodejs npm
 
 # Install app dependencies
 
-RUN npm config set registry "http://registry.npmjs.org/" \
-&& npm install -g inherits \
-&& npm install -g bower \
-&& bower update --allow-root \
-&& npm install -g grunt-cli 
+RUN npm config set registry "http://registry.npmjs.org/" 
+RUN npm install -g inherits 
+RUN npm install -g bower 
+RUN bower update --allow-root 
+RUN npm install -g grunt-cli 
 
 # Exec
 WORKDIR /src/ressources/build
