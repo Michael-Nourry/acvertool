@@ -24,7 +24,11 @@ RUN npm config set registry "http://registry.npmjs.org/" \
 && bower update --allow-root \
 && npm install -g grunt-cli 
 
+#  command
+COPY run.sh /usr/local/bin/run.sh
+RUN chmod +x /usr/local/bin/run.sh
+
 # Exec
-WORKDIR /src/ressources/build
-CMD grunt prod && grunt watch
+WORKDIR /src
+ENTRYPOINT ["/usr/local/bin/run.sh"]
 
